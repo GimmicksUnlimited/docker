@@ -21,11 +21,11 @@ sudo pip3 install docker-compose
 ```
 
 
-#setup
+# setup
 create data dir for graphite
 ```
 mkdir ./gdata
-export GRAPHITE_DATA3=$(pwd)/gdata
+export GRAPHITE_DATA=$(pwd)/gdata
 ```
 
 
