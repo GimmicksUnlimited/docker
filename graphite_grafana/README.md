@@ -22,17 +22,17 @@ sudo pip3 install docker-compose
 
 
 # setup
-create data dir for graphite
+create data dir for graphite grafana this is example where we create one in the same directory as this repo...
 ```
-mkdir ./gdata
-export GRAPHITE_DATA=$(pwd)/gdata
+mkdir -k ./datavol/grafana
+mkdir -k ./datavol/graphite
 ```
 
 
 
 # start
 ```
-docker-compose -f docker-compose.yml up -d
+./start.sh -d $(pwd)/datavol
 ```
 after runnning above you should be able to access graphite at http://localhost:8080 and grafana at http://localhost/
 
@@ -50,12 +50,13 @@ at this point default admin/admin account is available to access grafana
 
 
 
-
-
 # stop
 
 ```
-docker-compose -f docker-compose.yml down
+./shutdown.sh
 ```
+
+
+For grafana docker config see https://grafana.com/docs/grafana/latest/administration/configure-docker/
 
 
